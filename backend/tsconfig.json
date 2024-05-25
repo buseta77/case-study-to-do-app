@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "ESNext", // Suitable for Node.js
+    "outDir": "./dist",  // Redirect output structure to the directory
+    "moduleResolution": "node",
+    "rootDir": "./",  // Specifies the root directory of input files
+    "strict": true,      // Enable all strict type-checking options
+    "esModuleInterop": true, // Enables compilation of ES modules
+    "skipLibCheck": true, // Skip type checking of declaration files (`.d.ts`)
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["./"],
+    "types": [],
+    "baseUrl": "./", // Adjust based on your structure
+    "allowJs": true,
+    "noImplicitAny": false,
+  },
+  "include": [
+    "src/**/*.ts", // Adjust this pattern to include all your TypeScript files
+    "types.d.ts"
+  ],
+  "exclude": [
+    "node_modules" // Standard exclude to avoid processing node_modules
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "project": "./tsconfig.json"
+  }
+}
